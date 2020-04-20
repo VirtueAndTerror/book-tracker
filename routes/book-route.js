@@ -1,5 +1,6 @@
-import express from 'express';
-import controller from '../controllers/bookcontroller';
+const express = require('express');
+const controller = require('../controllers/books.controller');
+const { auth } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -9,4 +10,4 @@ router.get('/books/:bookId', controller.getOneBook);
 router.patch('/books/:bookId', controller.updateBook);
 router.delete('/books/:bookId', controller.deleteBook);
 
-export default router;
+module.exports = router;

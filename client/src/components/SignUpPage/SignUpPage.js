@@ -67,7 +67,7 @@ class SignUpPage extends Component {
 					type='password'
 					name='confirmPassword'
 					id='password'
-					placeholder='Password'
+					placeholder='Comfirm Password'
 				/>
 				<button>Register</button>
 			</form>
