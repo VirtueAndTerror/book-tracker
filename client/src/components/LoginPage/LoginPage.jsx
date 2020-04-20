@@ -3,16 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './LoginPage.css';
 
 class LoginPage extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			data: {
-				email: '',
-				password: '',
-			},
-			error: {},
-		};
-	}
+	state = {
+		data: {
+			email: '',
+			password: '',
+		},
+		error: {},
+	};
 
 	handleChange = event => {
 		const { value, name } = event.target;
@@ -21,8 +18,8 @@ class LoginPage extends Component {
 		this.setState({ data });
 	};
 
-	handleSubmit = async e => {
-		e.preventDefault();
+	handleSubmit = async event => {
+		event.preventDefault();
 
 		const { email, password } = this.state.data;
 
@@ -40,6 +37,8 @@ class LoginPage extends Component {
 		}
 
 		await login(email, password);
+
+		window.location = '/';
 	};
 
 	render() {

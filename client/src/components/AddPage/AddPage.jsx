@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getBooks } from '../../services/default-books.service.js.js';
+import { getBooks } from '../../services/default-books.service';
 import './AddPage.css';
 import '../GridLayout/GridLayout';
 
@@ -39,7 +39,7 @@ class AddPage extends Component {
 	};
 
 	render() {
-		const { books } = this.state;
+		const { books, value } = this.state;
 
 		return (
 			<div className='row'>
@@ -73,7 +73,7 @@ class AddPage extends Component {
 								id='title'
 								className='form-control'
 								placeholder='Ex. Crime and Punishment'
-								value={this.state.value}
+								value={value}
 								onChange={this.handleChange}
 							/>
 						</div>
@@ -85,7 +85,7 @@ class AddPage extends Component {
 								id='author'
 								className='form-control'
 								placeholder='Ex. Fiodor Dostoievsky'
-								value={this.state.value}
+								value={value}
 								onChange={this.handleChange}
 							/>
 						</div>

@@ -42,9 +42,8 @@ module.exports = {
 	},
 
 	login: async (req, res) => {
-		// const { error } = validateLogin(req.body);
-		// if (error) return res.status(400).send(error.details[0].message);
-		console.log(req.body);
+		const { error } = validateLogin(req.body);
+		if (error) return res.status(400).send(error.details[0].message);
 
 		const { email, password } = req.body;
 		const user = await User.findOne({ email });

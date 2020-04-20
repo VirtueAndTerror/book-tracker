@@ -32,7 +32,7 @@ class App extends Component {
 						<Route path='/add' exact component={AddPage} />
 						<Route path='/signup' exact component={SignUpPage} />
 						<Route path='/login' exact component={LoginPage} />
-						<Route path='logout' component={Logout} />
+						<Route path='/logout' component={Logout} />
 					</Switch>
 				</main>
 			</div>

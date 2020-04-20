@@ -1,6 +1,6 @@
 import jwtDecode from 'jwt-decode';
 
-const tokenKey = 'token;';
+const tokenKey = 'token';
 
 const auth = {
 	logout() {

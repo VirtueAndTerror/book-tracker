@@ -29,6 +29,8 @@
 }
 
 .add-book > h2,
-.book-list > h2 {
+.book-list > h2,
+.display-4 {
+	color: black;
 	font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
 }
